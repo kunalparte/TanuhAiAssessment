@@ -115,6 +115,15 @@ dependencies {
     debugImplementation(
         libs.androidx.compose.ui.test.manifest
     )
+
+//    implementation(libs.tensorFlow.lite.task.text) {
+//        exclude(
+//            group = "com.google.ai.edge.litert",
+//            module = "litert-api"
+//        )
+//    }
+
+    implementation(libs.onnx)
 }
 
 kapt {

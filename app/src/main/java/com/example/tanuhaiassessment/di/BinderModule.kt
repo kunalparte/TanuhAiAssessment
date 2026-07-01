@@ -4,7 +4,6 @@ import com.example.tanuhaiassessment.core.checksum.ChecksumValidator
 import com.example.tanuhaiassessment.core.checksum.ChecksumValidatorImpl
 import com.example.tanuhaiassessment.core.inference.image.ImageClassifier
 import com.example.tanuhaiassessment.core.inference.image.TFLiteImageClassifier
-import com.example.tanuhaiassessment.core.inference.text.MobileBertClassifier
 import com.example.tanuhaiassessment.core.inference.text.TextClassifier
 import com.example.tanuhaiassessment.core.modelManagement.downloader.ModelDownloader
 import com.example.tanuhaiassessment.core.modelManagement.downloader.ModelDownloaderImpl
@@ -18,6 +17,7 @@ import com.example.tanuhaiassessment.core.storage.model.ModelStorage
 import com.example.tanuhaiassessment.core.storage.model.ModelStorageImpl
 import com.example.tanuhaiassessment.core.storage.version.VersionStorage
 import com.example.tanuhaiassessment.core.storage.version.VersionStorageImpl
+import com.example.tanuhaiassessment.core.text.OnnxTextClassifier
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -79,7 +79,7 @@ abstract class BinderModule {
     @Binds
     @Singleton
     abstract fun bindTextClassifier(
-        impl : MobileBertClassifier
+        impl : OnnxTextClassifier
     ): TextClassifier
 }
 

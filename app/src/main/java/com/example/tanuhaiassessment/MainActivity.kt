@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.tanuhaiassessment.featureAssist.model.AssistantEvent
 import com.example.tanuhaiassessment.featureAssist.ui.AssistantScreen
-import com.example.tanuhaiassessment.featureAssist.vm.AssistantVIewModel
+import com.example.tanuhaiassessment.featureAssist.vm.AssistantViewModel
 import com.example.tanuhaiassessment.ui.theme.TanuhAiAssessmentTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue
@@ -27,7 +27,7 @@ import kotlin.getValue
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: AssistantVIewModel by viewModels()
+    private val viewModel: AssistantViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

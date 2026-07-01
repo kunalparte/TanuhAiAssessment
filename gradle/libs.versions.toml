@@ -16,14 +16,19 @@ datastore = "1.1.1"
 work = "2.10.1"
 
 hilt = "2.57"
+tfLiteTaskText = "0.4.4"
 
 lifecycleViewmodelCompose = "2.10.0"
 hiltNavigationCompose = "1.2.0"
 
-tfLite = "2.17.0"
+tfLite = "2.13.0"
 tfLiteSupport = "0.4.4"
 
 coil = "2.7.0"
+
+onnx = "1.18.0"
+djlTokenizers = "0.32.0"
+
 
 [libraries]
 
@@ -73,11 +78,13 @@ androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", vers
 
 # TensorFlow Lite
 tensorFlow-lite = { group = "org.tensorflow", name = "tensorflow-lite", version.ref = "tfLite" }
-tensorFlow-lite-support = { group = "org.tensorflow", name = "tensorflow-lite-support", version.ref = "tfLiteSupport" }
-
+#tensorFlow-lite-task-text = {group = "org.tensorflow", name = "tensorflow-lite-task-text", version.ref = 'tfLiteTaskText'}
 # Coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
+onnx = {group = "com.microsoft.onnxruntime", name = "onnxruntime-android", version.ref = 'onnx'}
+
+#djl-huggingface-tokenizers = { group = "ai.djl.huggingface", name = "tokenizers", version.ref = "djlTokenizers" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

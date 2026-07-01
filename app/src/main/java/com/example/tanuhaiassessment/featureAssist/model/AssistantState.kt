@@ -8,7 +8,13 @@ data class AssistantState(
 
     val isLoading: Boolean = false,
 
-    val analysisResult: String? = null,
+    val detectedObject: String? = null,
+    val imageConfidence: Float? = null,
+
+    val generatedText: String? = null,
+
+    val textCategory: String? = null,
+    val textConfidence: Float? = null,
 
     val errorMessage: String? = null
 
