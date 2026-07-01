@@ -29,6 +29,7 @@ class DownloadSchedulerImpl @Inject constructor(
 
     override fun scheduleDownload(modelId: ModelDownloadParams) {
         val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.UNMETERED)
             .build()
 
         val request = OneTimeWorkRequestBuilder<ModelDownloaderWorker>()
